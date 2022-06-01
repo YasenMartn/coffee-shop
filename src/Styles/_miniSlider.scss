@@ -1,0 +1,90 @@
+.miniSlider {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    @include flexColumn();
+    overflow: hidden;
+    margin-bottom: 50px;
+    .titlesContainer {
+        width: 100%;
+        @include flexBetween();
+        margin-bottom: 20px;
+        h1 {
+            color: $brown;
+        }
+        span {
+            color: $brown;
+            font-size: 1.2rem;
+            cursor: pointer;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .swiper {
+        width: 100%;
+        height: fit-content;
+        background-color: white;
+        border-radius: 0 !important;
+        .swiper-slide {
+            width: 250px !important;
+            height: fit-content;
+            background-color: white;
+            @include flexColumn();
+            .picContainer{
+                width: 100%;
+                height: 200px;
+                border-radius: 15px;
+                cursor: pointer;
+                overflow: hidden;
+                &:hover{
+                    border: 1px solid $brown;
+                    img{
+                        transform: scale(1.1);
+                    }
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    transition: .5s all ease-in-out;
+                    object-fit: cover;
+                    user-select: none;
+                }
+            }
+            .nameContainer{
+                width: 100%;
+                @include flexCenter();
+                padding: 10px 0;
+                .title{
+                    font-size: 1.5rem;
+                    color: $brown;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .miniSlider{
+        .titlesContainer{
+            h1{
+                font-size: 1.5rem;
+            }
+        }
+        .swiper{
+            .swiper-slide{
+                width: 140px !important;
+                .picContainer{
+                    height: 140px !important;
+
+                }
+                .nameContainer{
+                    .title{
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+}

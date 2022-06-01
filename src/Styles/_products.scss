@@ -1,0 +1,153 @@
+.products {
+    width: 100%;
+    min-height: 50vh;
+    @include flexColumn();
+    .titlesContainer {
+        width: 100%;
+        @include flexBetween();
+        margin-bottom: 20px;
+        h1 {
+            color: $brown;
+        }
+        span {
+            color: $brown;
+            font-size: 1.2rem;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .singleCoffee {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px;
+        @include flexCenter();
+        border: 1px solid white;
+        border-radius: 15px;
+        color: $brown;
+        &:hover{
+            background-color: $brown;
+            color: white;
+            .infoContainer{
+                .extrasContainer{
+                    .extra{
+                        border: 1px solid white;
+                    }
+                }
+            }
+        }
+        .imgContainer {
+            height: 100%;
+            border-radius: 15px;
+            width: 300px;
+            overflow: hidden;
+            border: 1px solid $brown;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 15px;
+                object-fit: cover;
+                cursor: pointer;
+            }
+        }
+        .infoContainer {
+            height: 100%;
+            width: 100%;
+            @include flexStart();
+            padding: 0 20px;
+            color: inherit;
+            .title {
+                font-size: 2rem;
+                color: inherit;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            .extrasContainer {
+                @include flexCenter();
+                margin-bottom: 20px;
+                color: inherit;
+                .icon{
+                    font-size: 1.5rem;
+                }
+                .extra {
+                    border: 1px solid $brown;
+                    border-radius: 20px;
+                    padding: 10px;
+                    margin-right: 10px;
+                    font-size: 1.2rem;
+                    color: inherit;
+                    @include flexCenter();
+                    font-weight: bold;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: white;
+                        color: $brown;
+                        transition: .5s ease-in-out;
+                    }
+                }
+            }
+            .priceDiscountContainer {
+                @include flexCenter();
+                width: 100%;
+                justify-content: space-between;
+                color: inherit;
+                .price {
+                    font-size: 2.2rem;
+                    color: inherit;
+                    font-weight: bold;
+                }
+                .discount {
+                    font-size: 2rem;
+                    color: inherit;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .products {
+        .titlesContainer {
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+        .singleCoffee {
+            height: 140px;
+            justify-content: flex-start;
+            .imgContainer {
+                height: 140px;
+                width: 140px;
+            }
+            .infoContainer {
+                width: calc(100% - 100px);
+                padding: 0 10px;
+                .title {
+                    font-size: 1.4rem;
+                    margin-bottom: 10px;
+                }
+                .extrasContainer {
+                    margin-bottom: 10px;
+                    .icon{
+                        font-size: 1rem;
+                    }
+                    .extra {
+                        font-size: 1rem;
+                        padding: 7px;
+                    }
+                }
+                .priceDiscountContainer {
+                    .price {
+                        font-size: 1.4rem;
+                    }
+                    .discount {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+}

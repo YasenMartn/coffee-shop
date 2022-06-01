@@ -1,0 +1,21 @@
+.home {
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    background-color: white;
+    @include flexColumn();
+    .homeContainer {
+        width: 100%;
+        min-height: calc(100vh - 70px);
+        background-color: white;
+        padding: 20px 50px;
+        @include flexColumn();
+    }
+}
+
+@media (max-width: 800px) {
+    .home {
+        .homeContainer{
+            padding: 20px;
+        }
+    }
+}

@@ -1,10 +1,18 @@
-import React from 'react';
+import Home from './Pages/Home';
+import "./Styles/Global.css";
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import ProductDetails from './Pages/ProductDetails';
+import Login from './Pages/Login';
 
 function App() {
   return (
-    <div className="App">
-      hey
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/> 
+        <Route path="/products/:id" element={<ProductDetails/>}/> 
+        <Route path="/login" element={<Login/>}/> 
+      </Routes>
+    </BrowserRouter>
   );
 }
 
