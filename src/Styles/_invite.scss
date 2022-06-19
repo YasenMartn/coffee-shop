@@ -1,0 +1,23 @@
+.invite{
+    width: 100%;
+    height: 100vh;
+    @include flexCenter();
+    .copyContainer{
+        @include flexCenter();
+        justify-content: space-between;
+        border: 1px solid black;
+        padding: 15px;
+        border-radius: 15px;
+        background-color: $brown;
+        color: white;
+        .icon{
+            cursor: pointer;
+            margin-left: 20px;
+            color: white;
+            transition: all .5s ease-in-out;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+}

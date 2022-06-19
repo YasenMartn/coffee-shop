@@ -81,6 +81,8 @@
         }
         .primary{
             @include primaryBtn();
+            text-decoration: none;
+            text-align: center;
         }
     }
 }

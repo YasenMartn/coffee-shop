@@ -12,10 +12,10 @@ const Navbar = () => {
     <div className='container'>
       <div className={"mobileMenu " + (menu ? "active" : "")}>
         <Link to="/" onClick={() => {setmenu(false)}}>Home</Link>
-        <a href="">Cart</a>
-        <a href="">Saved</a>
-        <a href="">About</a>
-        <a href="">Account</a>
+        <Link to="/login">Cart</Link>
+        <Link to="/login">Saved</Link>
+        <Link to="/login">About</Link>
+        <Link to="/login">Account</Link>
 
       </div>
 

@@ -3,27 +3,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 import SwiperCore, { Autoplay, Pagination } from "swiper";
 import { Link } from "react-router-dom";
+import { sliderData } from "../data";
 
 
 SwiperCore.use([Autoplay, Pagination])
 
 const Slider = () => {
-
-
-  const imgArr = [
-    {
-      pic: "/pictures/bg.jpg",
-      id: 1
-    },
-    {
-      pic: "/pictures/bg.jpg",
-      id: 2
-    },
-    {
-      pic: "/pictures/bg.jpg",
-      id: 3
-    },
-  ]
 
   return (
     <Swiper
@@ -36,14 +21,14 @@ const Slider = () => {
         "pauseOnMouseEnter": true
       }}
     >
-      {imgArr.map(item => (
-        <SwiperSlide>
-          <Link to="/login">
+      {sliderData.map(item => (
+        <SwiperSlide style={{ backgroundColor: `${item.bg}` }} key={item.id} >
+          <Link to={`${item.link}`}>
             <div className="infoContainer">
-              <h1>35% Off</h1>
-              <span className="info">Get 35% off after</span>
-              <span className="info">creating an account.</span>
-              <span className="info">Click for more details</span>
+              <h1>{item.title}</h1>
+              <span className="info">{item.text1}</span>
+              <span className="info">{item.text2}</span>
+              <span className="info">{item.text3}</span>
             </div>
             <div className="imgContainer">
 

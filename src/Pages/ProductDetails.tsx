@@ -10,15 +10,14 @@ const ProductDetails = () => {
   return (
     <div className='productDetails'>
 
-
       <div className="left">
         <img src={product?.pic} alt="coffee" />
         <Link to="/" className="iconContainer" style={{ left: "20px" }}  >
           <KeyboardArrowLeft fontSize='large' />
         </Link>
-        <div className="iconContainer" style={{ right: "20px" }}>
+        <Link to="/login" className="iconContainer" style={{ right: "20px" }}>
           <FavoriteBorder fontSize='large' />
-        </div>
+        </Link>
       </div>
 
 
@@ -33,7 +32,7 @@ const ProductDetails = () => {
           <div className="item">{product?.type} </div>
           <div className="item">{product?.food} </div>
         </div>
-        <button className="primary">Visit Now</button>
+        <Link to="/location" className="primary">Visit Now</Link>
       </div>
 
 

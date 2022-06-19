@@ -13,7 +13,6 @@
         position: relative;
         width: 100%;
         cursor: pointer;
-        background-color: rgb(0, 0, 0);
         a{
             text-decoration: none;
             width: 100%;
@@ -26,8 +25,7 @@
             right: 0;
             top: 0;
             @include flexCenter();
-            justify-content: flex-end;
-
+            overflow: visible;
             img {
                 width: auto;
                 height: 100%;
@@ -44,11 +42,12 @@
             padding-left: 50px;
             h1{
                 margin-bottom: 20px;
-                font-size: 2.5rem;
+                font-size: 3rem;
             }
             .info{
                 margin-bottom: 20px;
-                font-size: 1.5rem;
+                font-size: 2rem;
+                z-index: 200;
                 &:last-child{
                     margin-bottom: 0;
                 }

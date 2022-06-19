@@ -1,4 +1,4 @@
-.login{
+.register{
     width: 100%;
     height: 100vh;
     @include flexColumn();
@@ -62,7 +62,7 @@
             align-self: center;
             text-decoration: none;
             width: 100%;
-            text-align: center;
+            text-align: center
         }
     }
     .goBackBtn{
@@ -81,9 +81,10 @@
 }
 
 @media (max-width: 800px) {
-    .login{
+    .register{
         form{
             width: 90%;
         }
     }
 }
+

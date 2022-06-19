@@ -1,0 +1,52 @@
+.titlesContainer {
+    width: 100%;
+    @include flexBetween();
+    margin-bottom: 20px;
+    h1 {
+        color: $brown;
+    }
+    span {
+        color: $brown;
+        font-size: 1.2rem;
+        cursor: pointer;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.offers{
+    width: 100%;
+    min-height: 200px;
+    background-color: $brown;
+    border-radius: 15px;
+    color: white;
+    padding: 30px 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    @include flexColumn();
+    align-items: flex-start;
+    text-decoration: none;
+    h1{
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+    span{
+        font-size: 1.2rem;
+        line-height: 35px;
+        color: darken(white, 20%);
+    }
+}
+
+@media (max-width: 800px) {
+    .offers{
+        min-height: auto;
+        h1{
+            font-size: 1.5rem;
+        }
+        span{
+            font-size: 1.2rem;
+            line-height: 30px;
+        }
+    }
+}
